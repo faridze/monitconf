@@ -1,0 +1,6 @@
+# add each drive you want to monitor below
+check filesystem Main with path /dev/sda1
+    if space usage > 85% then alert
+check filesystem Backup with path /dev/sdb1
+    if space usage > 95% then alert
+

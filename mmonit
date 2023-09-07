@@ -1,0 +1,2 @@
+set eventqueue basedir /var/monit/ slots 1000
+set mmonit https://montusr:xxxxxxxxxxxxx@monit.domain.org/mmonit/collector

@@ -1,0 +1,19 @@
+check process php-fpm56 with pidfile /var/run/php-fpm56.pid
+    start program = "/bin/systemctl start php-fpm56"
+    stop program = "/bin/systemctl stop php-fpm56"
+    if totalmem > 80% then restart
+
+check process php-fpm72 with pidfile /var/run/php-fpm72.pid
+    start program = "/bin/systemctl start php-fpm72"
+    stop program = "/bin/systemctl stop php-fpm72"
+    if totalmem > 80% then restart
+
+check process php-fpm73 with pidfile /var/run/php-fpm73.pid
+    start program = "/bin/systemctl start php-fpm73"
+    stop program = "/bin/systemctl stop php-fpm73"
+    if totalmem > 80% then restart
+
+check process php-fpm74 with pidfile /var/run/php-fpm74.pid
+    start program = "/bin/systemctl start php-fpm74"
+    stop program = "/bin/systemctl stop php-fpm74"
+    if totalmem > 80% then restart

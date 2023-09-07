@@ -1,0 +1,4 @@
+check process apache with pidfile /var/run/httpd.pid
+    start program = "/bin/systemctl start httpd"
+    stop program = "/bin/systemctl stop httpd"
+    if totalmem > 80% then restart

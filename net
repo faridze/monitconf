@@ -1,0 +1,2 @@
+check network eth0 with interface eth0
+    if failed link then alert

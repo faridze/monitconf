@@ -1,0 +1,11 @@
+check host domain.net with address domain.net
+        if failed port 443 protocol https
+        and request "/clientarea.php" with content = "frmlogin"
+        for 2 cycles
+        then exec "/bin/systemctl restart httpd && /bin/systemctl restart php-fpm56 restart"
+
+check host cp.domain.org with address cp.domain.org
+        if failed port 443 protocol https
+        and request "/login" with content = "login-form"
+        for 2 cycles
+        then exec "/bin/systemctl restart httpd && /bin/systemctl restart php-fpm72 restart"

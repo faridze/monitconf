@@ -1,0 +1,16 @@
+#Mail settings
+
+set mailserver mail.domain.com port 25 username "monit@domain.net" password "xx" using tls with timeout 30 seconds
+#set mail-format { from: monit@edg.domain.com }
+set mail-format {
+  from: monit@mainserver.domain.org
+  subject: monit alert --  $EVENT
+  message: $EVENT Service $SERVICE
+                Date:        $DATE
+                Action:      $ACTION
+                Host:        $HOST
+                Description: $DESCRIPTION
+
+           Your faithful employee,
+           Monit }
+set alert monit@domain.net #email address which will receive monit alerts
